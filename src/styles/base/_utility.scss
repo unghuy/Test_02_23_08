@@ -13,7 +13,6 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: $blue-dark;
   box-shadow: 28px 28px 80px 0 $blue-dark-shadow;
 }
 
@@ -22,8 +21,8 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 80px;
-  padding-left: 80px;
+  padding-right: 15px;
+  padding-left: 15px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -43,8 +42,15 @@
 }
 
 .center {
-  width: 1170px;
-  margin: 0 auto;
+  text-align: center;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-white {
+  color: $white;
 }
 
 // Margin helper classes
