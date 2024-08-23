@@ -3,7 +3,7 @@
 }
 
 .site-wrapper {
-  @extend %flex-box;
+  @extend %flex-box !optional;
   width: 100%;
   max-width: 1920px;
   margin-right: auto;
@@ -18,7 +18,7 @@
 }
 
 .content-wrapper {
-  @extend %flexbox;
+  @extend %flexbox !optional;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
