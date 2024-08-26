@@ -178,3 +178,184 @@
 }
 
 // End CSS About
+
+// CSS Categories
+.cate-container {
+  margin: 200px auto;
+
+  .title-content {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      @include rem('font-size', 52);
+      @include rem('letter-spacing', 16);
+      text-transform: uppercase;
+      @include rem('margin-bottom', 32);
+    }
+
+    p {
+      background-color: $bg-second;
+      text-align: initial;
+      font-weight: bold;
+      padding: 10px;
+      width: 35%;
+      float: right;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-color: $black;
+        width: 100px;
+        height: 3px;
+        position: absolute;
+        top: 20px;
+        left: -15%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+  }
+
+  .cate-first {
+    h1 {
+      display: inline-block;
+      @include rem('font-size', 52);
+      @include rem('letter-spacing', 16);
+      color: $text-sixth;
+      position: relative;
+
+      &::after {
+        content: '';
+        background-color: $black;
+        display: block;
+        width: 100px;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        right: -65px;
+        transform: translateX(50%);
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__img {
+      width: 65%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        @include rem('font-size', 24);
+        @include rem('letter-spacing', 4);
+        font-weight: 900;
+      }
+
+      p {
+        @include rem('font-size', 14);
+        margin: 40px 20px 40px 0;
+      }
+    }
+  }
+
+  .cate-second {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      position: relative;
+      width: 90%;
+      text-align: center;
+      margin-top: 50px;
+
+      h2 {
+        @include rem('font-size', 24);
+        @include rem('letter-spacing', 4);
+        font-weight: 900;
+        padding: 0 100px;
+
+        &::after {
+          content: '';
+          display: block;
+          background-color: $bg-second;
+          width: 100%;
+          height: 30px;
+          margin-top: -15px;
+        }
+      }
+
+      &__box {
+        text-align: left;
+        width: 50%;
+        float: right;
+
+        p {
+          @include rem('font-size', 14);
+          margin: 20px 100px 20px 0;
+        }
+
+        &::after {
+          content: '';
+          clear: both;
+          display: table;
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        background-color: $black;
+        width: 2px;
+        height: 120px;
+        position: absolute;
+        top: -30%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__img {
+      margin-top: -185px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .link-readmore {
+    color: $text-second;
+    display: inline-block;
+    font-weight: bold;
+
+    &::after {
+      content: 'next';
+      font-family: swiper-icons;
+      @include rem('font-size', 12);
+      margin-left: 10px;
+    }
+  }
+}
+
+// End CSS Categories
