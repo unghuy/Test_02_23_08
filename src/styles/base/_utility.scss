@@ -2,6 +2,13 @@
   clear: both;
 }
 
+.container {
+  width: 100%;
+  max-width: 1430px;
+  margin: auto;
+  padding: 0 15px;
+}
+
 .site-wrapper {
   @extend %flex-box !optional;
   width: 100%;

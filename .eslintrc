@@ -4,6 +4,7 @@
     "browser": true,
     "node": true,
     "mocha": true,
+    "jquery": true
   },
   "parserOptions": {
     "sourceType": "module",
