@@ -23,6 +23,11 @@
   <!-- build:css(.) styles/vendor.min.css -->
 <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.css" />
 <!-- endbuild -->
+
+<!-- Swiper Slider build-->
+<link rel="stylesheet" type="text/css" media="screen" href="node_modules/swiper/swiper-bundle.min.css">
+<!-- Endbuild -->
+
 <!-- build:css(.tmp) styles/style.min.css -->
 <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
 <!-- endbuild -->
@@ -66,15 +71,56 @@
     <!-- include banner.html -->
     <section class="banner-container">
   <div class="block-container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="center">
-          <div class="col-xs-12">
-            <div class="login-form">
-              <p class="title-block">Banner</p>
+    <div class="slider-content">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="content" data-content="one">
+              <p>Designed for utility</p>
+              <h1>Navy Salt &amp; Pepper</h1>
+              <a href="#" class="content__link"><span>Gear UP</span></a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="content" data-content="two">
+              <p>Designed for utility</p>
+              <h1>Navy Salt &amp; Pepper</h1>
+              <a href="#" class="content__link"><span>Gear UP</span></a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="content" data-content="three">
+              <p>Designed for utility</p>
+              <h1>Navy Salt &amp; Pepper</h1>
+              <a href="#" class="content__link"><span>Gear UP</span></a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="content" data-content="four">
+              <p>Designed for utility</p>
+              <h1>Navy Salt &amp; Pepper</h1>
+              <a href="#" class="content__link"><span>Gear UP</span></a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="content" data-content="five">
+              <p>Designed for utility</p>
+              <h1>Navy Salt &amp; Pepper</h1>
+              <a href="#" class="content__link"><span>Gear UP</span></a>
             </div>
           </div>
         </div>
+
+        <!-- navigation arrows slider -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- pagination slider -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </div>
@@ -116,6 +162,9 @@
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <!-- <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
 
+<!-- Swiper Slider build -->
+<script src="node_modules/swiper/swiper-bundle.min.js"></script>
+<!-- endbuild -->
 
 <!-- endbuild -->
 <!-- build:js scripts/script.min.js -->
