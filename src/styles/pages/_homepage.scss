@@ -1,0 +1,22 @@
+// CSS Banner
+.banner-container {
+  position: relative;
+  height: 100vh;
+
+  &::after {
+    content: '';
+    background: url('../../images/banner.png') no-repeat center top / contain;
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .block-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+// End CSS Banner
