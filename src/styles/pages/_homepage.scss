@@ -1,13 +1,15 @@
 // CSS Banner
 .banner-container {
   position: relative;
-  height: 100vh;
+  height: 650px;
+  max-height: 700px;
 
   &::after {
     content: '';
     background: url('../../images/banner.png') no-repeat center top / contain;
-    width: 65%;
-    height: 100%;
+    width: 60%;
+    height: 650px;
+    max-height: 700px;
     position: absolute;
     top: 0;
     right: 0;
@@ -15,7 +17,7 @@
 
   .block-container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     height: 100%;
   }
@@ -35,21 +37,24 @@
       position: relative;
 
       img {
-        width: 65%;
+        width: 60%;
         height: auto;
         object-fit: cover;
       }
     }
   }
 
-  &__first {
-    padding: 200px 0 100px;
+  &__first,
+  &__second {
+    padding: 150px 0;
+  }
 
+  &__first {
     &__text-overlay {
       position: absolute;
-      width: 38%;
+      width: 45%;
       top: 25%;
-      right: 17%;
+      right: 20%;
       transform: translate(-50%, 50%);
       color: $white;
 
@@ -72,16 +77,16 @@
     &__desc {
       background-color: transparent;
       width: 50%;
-      padding: 40px 100px 20px 0;
+      padding: 40px 80px 25px 0;
       border: 2px solid #d8d2c6;
       position: absolute;
-      top: 35%;
+      top: 30%;
       right: 10%;
       z-index: 10;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
       &__box {
-        max-width: 300px;
+        max-width: 325px;
         float: right;
 
         p {
@@ -93,9 +98,10 @@
         .arrow {
           background-color: #ffffff;
           width: 180px;
-          height: 80px;
+          height: 90px;
           position: absolute;
-          bottom: -20%;
+          padding-top: 10px;
+          bottom: -30%;
 
           img {
             width: 100%;
@@ -114,15 +120,14 @@
 
   &__second {
     background-color: $text-fourth;
-    padding: 100px 0 200px;
 
     &__text-overlay {
       position: absolute;
-      width: 38%;
+      width: 45%;
       top: 45%;
-      left: 50%;
+      right: -10%;
       color: $white;
-      transform: translate(-40%, -50%);
+      transform: translate(-50%, -50%);
 
       h1 {
         font-size: 48px;
@@ -145,13 +150,13 @@
       border: 2px solid #d8d2c6;
       padding: 40px 0 40px 40px;
       position: absolute;
-      top: 20%;
-      left: 10%;
+      top: 27%;
+      left: 15%;
       z-index: 10;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
       &__box {
-        max-width: 300px;
+        max-width: 325px;
 
         p {
           font-size: 14px;
@@ -164,6 +169,7 @@
           width: 180px;
           height: 80px;
           position: absolute;
+          left: 15%;
           bottom: -20%;
 
           img {
@@ -206,7 +212,7 @@
       &::before {
         content: '';
         background-color: $black;
-        width: 100px;
+        width: 120px;
         height: 3px;
         position: absolute;
         top: 20px;
@@ -234,7 +240,7 @@
         content: '';
         background-color: $black;
         display: block;
-        width: 100px;
+        width: 120px;
         height: 3px;
         position: absolute;
         top: 50%;
@@ -261,7 +267,9 @@
       width: 32%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 150px;
+      position: relative;
 
       h2 {
         @include rem('font-size', 24);
@@ -271,7 +279,18 @@
 
       p {
         @include rem('font-size', 14);
-        margin: 40px 20px 40px 0;
+        margin: 20px 20px 20px 0;
+      }
+
+      &::before {
+        content: '';
+        background-color: $black;
+        display: block;
+        width: 3px;
+        height: 60px;
+        position: absolute;
+        top: 12%;
+        left: 0;
       }
     }
   }
@@ -306,12 +325,12 @@
 
       &__box {
         text-align: left;
-        width: 50%;
+        width: 60%;
         float: right;
 
         p {
           @include rem('font-size', 14);
-          margin: 20px 100px 20px 0;
+          margin: 20px 80px 20px 0;
         }
 
         &::after {

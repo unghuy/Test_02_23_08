@@ -1,6 +1,6 @@
 // CSS Custom Swiper Slider
 .swiper-container {
-  width: 60%;
+  width: 80%;
   height: 400px;
   overflow: hidden;
 }
@@ -21,8 +21,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    top: 0;
-    left: 30%;
+    top: -10%;
+    left: 20%;
     width: 100%;
     height: max-content;
     padding: 20px;
@@ -35,6 +35,7 @@
       font-weight: bold;
       margin-left: 100px;
       padding: 10px 40px;
+      opacity: 0;
       transition: all 0.3s ease;
       &:hover {
         opacity: 0.7;
@@ -87,7 +88,10 @@
 
     p {
       animation: moveDown 0.4s ease-in forwards;
-
+    }
+    &__link {
+      animation: moveDown 0.4s ease-in forwards;
+      animation-delay: 0.8s;
     }
   }
 }
@@ -107,7 +111,7 @@
 .swiper-pagination {
   position: absolute;
   right: unset !important;
-  top: 10% !important;
+  top: 20px !important;
   left: 80px !important;
   width: 60px;
   color: $text-second;
@@ -118,8 +122,8 @@
     content: '';
     position: absolute;
     background-color: $bg-primary;
-    width: 3px;
-    height: 30px;
+    width: 2px;
+    height: 35px;
     top: -10%;
     left: 50%;
     transform: translateX(-50%);
