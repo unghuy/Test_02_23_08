@@ -228,12 +228,14 @@
     }
   }
 
+  .cate-number {
+    @include rem('font-size', 52);
+    @include rem('letter-spacing', 16);
+    color: $text-sixth;
+  }
+
   .cate-first {
     h1 {
-      display: inline-block;
-      @include rem('font-size', 52);
-      @include rem('letter-spacing', 16);
-      color: $text-sixth;
       position: relative;
 
       &::after {
@@ -244,7 +246,7 @@
         height: 3px;
         position: absolute;
         top: 50%;
-        right: -65px;
+        left: 35px;
         transform: translateX(50%);
       }
     }
@@ -354,12 +356,116 @@
     }
 
     &__img {
-      margin-top: -185px;
+      margin-top: -270px;
+      position: relative;
 
       img {
         width: 100%;
         height: 100%;
       }
+
+      &::before {
+        content: '';
+        background-color: $bg-third;
+        display: block;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 20px;
+        -webkit-mask: url('../../images/tanner_logo.svg') no-repeat 55% 50%;
+        mask: url('../../images/tanner_logo.svg') no-repeat 55% 50%;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+      }
+
+      &::after {
+        content: '';
+        background-color: $black;
+        display: block;
+        width: 3px;
+        height: 140px;
+        position: absolute;
+        top: 12%;
+        left: 35%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .cate-third {
+    margin-top: 100px;
+
+    .cate-number {
+      text-align: center;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__img {
+      width: 50%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      width: 50%;
+      max-width: 575px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 50px;
+
+      h2 {
+        @include rem('font-size', 24);
+        @include rem('letter-spacing', 4);
+      }
+
+      p {
+        @include rem('font-size', 14);
+        text-align: justify;
+        margin: 20px auto;
+      }
+    }
+  }
+
+  .cate-fourth {
+    margin-top: -200px;
+
+    .cate-number {
+      text-align: right;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      width: 40%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 70px;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    &__img {
+      width: 50%;
     }
   }
 
@@ -373,6 +479,60 @@
       font-family: swiper-icons;
       @include rem('font-size', 12);
       margin-left: 10px;
+    }
+  }
+
+  .cate-list-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 0 40px;
+    width: 80%;
+    margin: -325px auto 0;
+
+    &__item {
+      position: relative;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: $blue-dark-shadow;
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+    }
+
+    &__icon {
+      color: white;
+      font-size: 36px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &__bg-collect {
+      width: 100%;
+      height: 100%;
+      max-width: 195px;
     }
   }
 }
