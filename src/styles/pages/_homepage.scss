@@ -1,14 +1,14 @@
 // CSS Banner
 .banner-container {
-  position: relative;
-  height: 650px;
+  height: 700px;
   max-height: 700px;
 
   &::after {
     content: '';
-    background: url('../../images/banner.png') no-repeat center top / contain;
+    background: url('../../images/banner.png') no-repeat center top;
+    background-size: cover;
     width: 60%;
-    height: 650px;
+    height: 700px;
     max-height: 700px;
     position: absolute;
     top: 0;
@@ -59,12 +59,12 @@
       color: $white;
 
       h1 {
-        font-size: 48px;
+        @include rem('font-size', 48);
         letter-spacing: 12px;
       }
 
       p {
-        font-size: 20px;
+        @include rem('font-size', 20);
         float: right;
 
         &::after {

@@ -1,0 +1,41 @@
+.hover-link {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: $bg-primary;
+    width: 0;
+    height: 2px;
+    top: 40%;
+    left: -30px;
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    transition: width 0.2s linear;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: $bg-primary;
+    width: 0;
+    height: 4px;
+    border-radius: 50%;
+    bottom: 50%;
+    right: -10px;
+    -webkit-transform: translate(-15%, 50%);
+    -moz-transform: translate(-15%, 50%);
+    transform: translate(-15%, 50%);
+    transition: width 0.2s linear;
+  }
+
+  &:hover {
+    &::before {
+      width: 40px;
+    }
+
+    &::after {
+      width: 4px;
+    }
+  }
+}

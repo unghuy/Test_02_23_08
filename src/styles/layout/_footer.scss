@@ -1,0 +1,88 @@
+.footer-container {
+  background-color: $text-fourth;
+  padding: 40px 0;
+}
+
+.footer-first {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  &__ft-logo {
+    img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+    }
+  }
+
+  &__ft-menu {
+    @include rem('font-size', 14)
+  }
+  .ft-nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+    &__link {
+      color: $text-third;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  &__ft-address {
+    p {
+      line-height: 1.6;
+    }
+  }
+  .newsletter {
+    width: 100%;
+    max-width: 325px;
+    &__title {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    &__sub-title {
+      @include rem('font-size', 13);
+      margin: 20px auto;
+    }
+    &__form {
+      display: flex;
+      &__input-text {
+        background-color: $white;
+        border: none;
+        padding: 7px;
+      }
+      &__btn {
+        background-color: $black;
+        padding: 0 18px;
+        .icon-arr {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.footer-second {
+  &__item {
+    display: flex;
+    column-gap: 150px;
+    @include rem('font-size', 14);
+    .ft-copyright {
+      text-transform: uppercase;
+    }
+
+    .ft-social {
+      display: flex;
+      column-gap: 60px;
+      &__link {
+        color: $black;
+      }
+    }
+  }
+}
