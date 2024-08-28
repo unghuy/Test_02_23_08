@@ -18,6 +18,8 @@ import syntax_scss from "postcss-scss";
 import stylelint from "stylelint";
 import * as sass from "sass";
 import gulpSass from "gulp-sass";
+import postcssUrl from 'postcss-url';
+import replacePathHTML from 'gulp-replace';
 
 // Set the Sass compiler for gulp-sass
 const sassCompiler = gulpSass(sass);
@@ -102,6 +104,19 @@ export const sassTask = gulp.series(htmlHintTask, () => {
   return gulp
     .src(`${sources.src}/styles/**/*.scss`)
     .pipe(sassCompiler().on("error", sassCompiler.logError))
+    .pipe(
+      postcss([
+        postcssUrl({
+          url: (asset) => {
+            // Example: Change "../images" to "/assets/images"
+            if (asset.url.startsWith('../../')) {
+              return asset.url.replace('../../', '../');
+            }
+            return asset.url;
+          }
+        })
+      ])
+    )
     .pipe(gulp.dest(".tmp/styles"))
     .pipe(connect.reload());
 });
@@ -157,6 +172,7 @@ export function copyFonts() {
 export const prettifyTask = gulp.series(copyFonts, () => {
   return gulp
     .src([`${sources.dist}/*.html`])
+    .pipe(replacePathHTML('../../images', './images'))
     .pipe(
       prettify({
         indent_char: " ",

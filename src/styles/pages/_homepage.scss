@@ -1,0 +1,519 @@
+// CSS Banner
+.banner-container {
+  height: 700px;
+  max-height: 700px;
+
+  &::after {
+    content: '';
+    background: url('../../images/banner.png') no-repeat center top;
+    background-size: cover;
+    width: 60%;
+    height: 700px;
+    max-height: 700px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .block-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// End CSS Banner
+
+// CSS About
+.block-about {
+
+  &__first,
+  &__second {
+    width: 100%;
+    position: relative;
+
+    &__img {
+      position: relative;
+
+      img {
+        width: 60%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__first,
+  &__second {
+    padding: 150px 0;
+  }
+
+  &__first {
+    &__text-overlay {
+      position: absolute;
+      width: 45%;
+      top: 25%;
+      right: 20%;
+      transform: translate(-50%, 50%);
+      color: $white;
+
+      h1 {
+        @include rem('font-size', 48);
+        letter-spacing: 12px;
+      }
+
+      p {
+        @include rem('font-size', 20);
+        float: right;
+
+        &::after {
+          content: '';
+          clear: both;
+        }
+      }
+    }
+
+    &__desc {
+      background-color: transparent;
+      width: 50%;
+      padding: 40px 80px 25px 0;
+      border: 2px solid #d8d2c6;
+      position: absolute;
+      top: 30%;
+      right: 10%;
+      z-index: 10;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+      &__box {
+        max-width: 375px;
+        float: right;
+
+        p {
+          font-size: 14px;
+          line-height: 2.5;
+          color: #999999;
+        }
+
+        .arrow {
+          background-color: #ffffff;
+          width: 180px;
+          height: 90px;
+          position: absolute;
+          padding-top: 10px;
+          bottom: -30%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        &::after {
+          content: '';
+          clear: both;
+        }
+      }
+    }
+  }
+
+  &__second {
+    background-color: $text-fourth;
+
+    &__text-overlay {
+      position: absolute;
+      width: 45%;
+      top: 45%;
+      right: -10%;
+      color: $white;
+      transform: translate(-50%, -50%);
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: 12px;
+      }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+
+    &__img {
+      text-align: right;
+    }
+
+    &__desc {
+      background-color: transparent;
+      width: 50%;
+      border: 2px solid #d8d2c6;
+      padding: 40px 0 40px 40px;
+      position: absolute;
+      top: 30%;
+      left: 15%;
+      z-index: 10;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+      &__box {
+        max-width: 375px;
+
+        p {
+          font-size: 14px;
+          line-height: 2.5;
+          color: #999999;
+        }
+
+        .arrow {
+          background-color: $text-fourth;
+          width: 180px;
+          height: 90px;
+          position: absolute;
+          left: 15%;
+          padding-top: 10px;
+          bottom: -30%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End CSS About
+
+// CSS Categories
+.cate-container {
+  margin: 200px auto;
+
+  .title-content {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      @include rem('font-size', 52);
+      @include rem('letter-spacing', 16);
+      text-transform: uppercase;
+      @include rem('margin-bottom', 32);
+    }
+
+    p {
+      background-color: $bg-second;
+      text-align: initial;
+      font-weight: bold;
+      padding: 10px;
+      width: 35%;
+      float: right;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-color: $black;
+        width: 120px;
+        height: 3px;
+        position: absolute;
+        top: 20px;
+        left: -15%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+  }
+
+  .cate-number {
+    @include rem('font-size', 52);
+    @include rem('letter-spacing', 16);
+    color: $text-sixth;
+  }
+
+  .cate-first {
+    h1 {
+      position: relative;
+
+      &::after {
+        content: '';
+        background-color: $black;
+        display: block;
+        width: 120px;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        transform: translateX(50%);
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__img {
+      width: 65%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 150px;
+      position: relative;
+
+      h2 {
+        font-weight: 900;
+      }
+
+      p {
+        @include rem('font-size', 14);
+        margin: 20px 20px 20px 0;
+      }
+
+      &::before {
+        content: '';
+        background-color: $black;
+        display: block;
+        width: 3px;
+        height: 60px;
+        position: absolute;
+        top: 12%;
+        left: 0;
+      }
+    }
+  }
+
+  .cate-second {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      position: relative;
+      width: 90%;
+      text-align: center;
+      margin-top: 50px;
+
+      h2 {
+        font-weight: 900;
+        padding: 0 100px;
+
+        &::after {
+          content: '';
+          display: block;
+          background-color: $bg-second;
+          width: 100%;
+          height: 30px;
+          margin-top: -15px;
+        }
+      }
+
+      &__box {
+        text-align: left;
+        width: 60%;
+        float: right;
+
+        p {
+          @include rem('font-size', 14);
+          margin: 20px 80px 20px 0;
+        }
+
+        &::after {
+          content: '';
+          clear: both;
+          display: table;
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        background-color: $black;
+        width: 2px;
+        height: 120px;
+        position: absolute;
+        top: -30%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__img {
+      margin-top: -270px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &::before {
+        content: '';
+        background-color: $bg-third;
+        display: block;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 20px;
+        -webkit-mask: url('../../images/tanner_logo.svg') no-repeat 55% 50%;
+        mask: url('../../images/tanner_logo.svg') no-repeat 55% 50%;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+      }
+
+      &::after {
+        content: '';
+        background-color: $black;
+        display: block;
+        width: 3px;
+        height: 140px;
+        position: absolute;
+        top: 12%;
+        left: 35%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .cate-third {
+    margin-top: 100px;
+
+    .cate-number {
+      text-align: center;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__img {
+      width: 50%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      width: 50%;
+      max-width: 575px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 50px;
+
+      p {
+        @include rem('font-size', 14);
+        text-align: justify;
+        margin: 20px auto;
+      }
+    }
+  }
+
+  .cate-fourth {
+    margin-top: -200px;
+
+    .cate-number {
+      text-align: right;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      width: 40%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 70px;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    &__img {
+      width: 50%;
+    }
+  }
+
+  .cate-list-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 0 40px;
+    width: 80%;
+    margin: -325px auto 0;
+
+    &__item {
+      position: relative;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: $blue-dark-shadow;
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+    }
+
+    &__icon {
+      color: white;
+      font-size: 36px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &__bg-collect {
+      width: 100%;
+      height: 100%;
+      max-width: 195px;
+    }
+  }
+}
+
+// End CSS Categories

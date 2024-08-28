@@ -21,8 +21,11 @@
 <!-- Google Font -->
   <!-- include styles.html -->
   <!-- build:css(.) styles/vendor.min.css -->
-<link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.css" />
-<!-- endbuild -->
+<link rel="stylesheet" type="text/css" media="screen" href="node_modules/swiper/swiper-bundle.css">
+<!-- Endbuild -->
+
+<!-- <link rel="stylesheet"  type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" /> -->
+
 <!-- build:css(.tmp) styles/style.min.css -->
 <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
 <!-- endbuild -->
@@ -31,30 +34,94 @@
   <div class="wrapper">
     <!-- include header.html -->
     <header class="header-container">
-  <div class="header-content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="center">
-          <div class="col-xs-12">
-            <p>Header Container</p>
+  <section class="site-wrapper">
+    <div class="container">
+      <div class="header-content">
+        <div class="navbar">
+          <div class="content-wrapper nav">
+            <a class="logo" href="#">
+              <div class="bg-logo">
+                <img
+                  class="img-logo"
+                  src="../../images/tanner_logo.svg"
+                  alt="Tanner Logo"
+                />
+              </div>
+              <nav class="nav-link-wrapper">
+                <a href="#" class="nav-link text-black hover-link">Navy Salt</a>
+                <a href="#" class="nav-link text-black hover-link">Voyager</a>
+                <a href="#" class="nav-link text-white hover-link">Drifter</a>
+                <a href="#" class="nav-link text-white hover-link">Collection</a>
+                <a href="#" class="nav-link text-white hover-link">Contact</a>
+              </nav>
+            </a>
+            <a aria-label="mobile menu" class="nav-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </header>
+
 
     <!-- include banner.html -->
     <section class="banner-container">
   <div class="block-container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="center">
-          <div class="col-xs-12">
-            <div class="login-form">
-              <p class="title-block">Banner</p>
+    <div class="container">
+      <div class="slider-content">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="content" data-content="one">
+                <p>Designed for utility</p>
+                <h1>Navy Salt &amp; Pepper</h1>
+                <a href="#" class="content__link"><span>Gear UP</span></a>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="content" data-content="two">
+                <p>Designed for utility</p>
+                <h1>Navy Salt &amp; Pepper</h1>
+                <a href="#" class="content__link"><span>Gear UP</span></a>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="content" data-content="three">
+                <p>Designed for utility</p>
+                <h1>Navy Salt &amp; Pepper</h1>
+                <a href="#" class="content__link"><span>Gear UP</span></a>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="content" data-content="four">
+                <p>Designed for utility</p>
+                <h1>Navy Salt &amp; Pepper</h1>
+                <a href="#" class="content__link"><span>Gear UP</span></a>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="content" data-content="five">
+                <p>Designed for utility</p>
+                <h1>Navy Salt &amp; Pepper</h1>
+                <a href="#" class="content__link"><span>Gear UP</span></a>
+              </div>
             </div>
           </div>
+  
+          <!-- navigation arrows slider -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+  
+          <!-- pagination slider -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -62,28 +129,270 @@
   <div class="clearfix"></div>
 </section>
 
-    <section class="main-container">
-      <div id="a" class="block-container">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="center">
-              <div class="col-xs-12">
-                <h4 class="title-block">HTML Boilerplate</h4>
+    <!-- include about.html -->
+    <div class="about-container">
+  <div class="block-container">
+    <div class="block-about__first">
+      <div class="block-about__first__img">
+        <img src="../../images/bg2.png" alt="Voyager Daypack" />
+        <div class="block-about__first__text-overlay">
+          <h1>VOYAGER DAYPACK</h1>
+          <p>NAVY SALT &amp; PEPPER</p>
+        </div>
+      </div>
+      <div class="block-about__first__desc">
+        <div class="block-about__first__desc__box">
+          <p>
+            Whether you&apos;re stomping around outdoors or traversing the city,
+            our Voyager Daypack was designed to be adaptable in all
+            environments. Compact, lightweight and a comfortable for people of
+            all sizes. this silhouette is versatile enough to fit just about
+            anyone&apos;s daily routine.
+          </p>
+          <div class="arrow">
+            <img src="../../images/arrow_img.png" alt="Arrows" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-about__second">
+      <div class="block-about__second__desc">
+        <div class="block-about__second__desc__box">
+          <p>
+            Field-tested from the peaks of the Cascades down to the desert floor
+            of Joshua Tree, the Wilderness Rucksack was built to put on some
+            serious miles for years to come. A comfortable, dependable
+            combination of 14oz Salt &amp; Pepper canvas, premium wool felt, and
+            Cambara English bridle leather.
+          </p>
+          <div class="arrow">
+            <img src="../../images/arrow_img.png" alt="Arrows" />
+          </div>
+        </div>
+      </div>
+      <div class="block-about__second__img">
+        <img src="../../images/bg3.png" alt="Voyager Daypack" />
+        <div class="block-about__second__text-overlay">
+          <h1>DRIFTER DOPP KIT</h1>
+          <p>NAVY SALT &amp; PEPPER</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- include categories.html -->
+    <div class="cate-container">
+  <div class="block-container">
+    <div class="container">
+      <div class="title-content">
+        <h1>Tanner Collections</h1>
+        <p>NAVY SALT &amp; PEPPER</p>
+      </div>
+      <div class="cate-content">
+        <div class="cate-first">
+          <h1 class="cate-number">01</h1>
+          <div class="cate-first__content">
+            <div class="cate-first__img">
+              <img src="../../images/collect1.png" alt="Category 01" />
+            </div>
+            <div class="cate-first__text">
+              <h2>NOMAD DUFFLE</h2>
+              <p>
+                This bag can be carried by hand, worn as a backpack or slung
+                over a shoulder depending on your traveling needs
+              </p>
+              <a href="#" class="link-readmore"><span>Read more</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="cate-second">
+          <div class="cate-second__content">
+            <div class="cate-second__text">
+              <h2>SPRUCE SALT &amp; PEPPER</h2>
+              <div class="cate-second__text__box">
+                <p>
+                  We designed our Nomad Duffle as a versatile yet rugged piece
+                  of luggage that's just as comfortable outdoors as it is in an
+                  overhead compartment
+                </p>
+                <a href="#" class="link-readmore"><span>Read more</span></a>
               </div>
+            </div>
+            <div class="cate-second__img">
+              <img src="../../images/collect1-1.png" alt="Category 02" />
+            </div>
+          </div>
+        </div>
+        <div class="cate-third">
+          <h1 class="cate-number">02</h1>
+          <div class="cate-third__content">
+            <div class="cate-third__img">
+              <img src="../../images/collect2.png" alt="Category 03" />
+            </div>
+            <div class="cate-third__text">
+              <h2>FIELD CAMERA BAG</h2>
+              <p>
+                Our field camera bag is constructed from 14oz Salt &amp; Pepper
+                canvas and Cambara Meridian English bridle leather. We've put
+                these bags through the ringer in testing and we think you'll
+                approve of the result. Our Camera Bag is fully lined and padded,
+                and features an adjustable shoulder strap and pad, as well as
+                two interior flap pockets for smaller gear and film.
+              </p>
+              <a href="#" class="link-readmore"><span>Read more</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="cate-fourth">
+          <h1 class="cate-number">03</h1>
+          <div class="cate-fourth__content">
+            <div class="cate-fourth__title">
+              <img
+                src="../../images/voyager_paypack_img.png"
+                alt="VOYAGER DAYPACK"
+              />
+            </div>
+            <div class="cate-fourth__img">
+              <img src="../../images/collect3.png" alt="Category 04" />
             </div>
           </div>
         </div>
       </div>
-      <div class="clearfix"></div>
-    </section>
+    </div>
+    <div class="cate-list-items">
+      <div class="cate-list-items__item">
+        <img
+          src="../../images/co-item1.png"
+          alt="Item 1"
+          class="cate-list-items__img"
+        />
+        <div class="overlay">
+          <a href="#" class="cate-list-items__icon" title="Add Item">
+            <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="cate-list-items__item">
+        <img
+          src="../../images/co-item2.png"
+          alt="Item 1"
+          class="cate-list-items__img"
+        />
+        <div class="overlay">
+          <a href="#" class="cate-list-items__icon" title="Add Item">
+            <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="cate-list-items__item">
+        <img
+          src="../../images/co-item3.png"
+          alt="Item 1"
+          class="cate-list-items__img"
+        />
+        <div class="overlay">
+          <a href="#" class="cate-list-items__icon" title="Add Item">
+            <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="cate-list-items__item">
+        <img
+          src="../../images/co-item4.png"
+          alt="Item 1"
+          class="cate-list-items__img"
+        />
+        <div class="overlay">
+          <a href="#" class="cate-list-items__icon" title="Add Item">
+            <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="cate-list-items__item">
+        <img
+          src="../../images/co-item6.png"
+          alt="Item 1"
+          class="cate-list-items__img"
+        />
+        <div class="overlay">
+          <a href="#" class="cate-list-items__icon" title="Add Item">
+            <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="cate-list-items__item">
+        <img
+          src="../../images/co-item6.png"
+          alt="Item 1"
+          class="cate-list-items__img"
+        />
+        <div class="overlay">
+          <a href="#" class="cate-list-items__icon" title="Add Item">
+            <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="cate-list-items__item">
+        <img
+          src="../../images/bg-collect.png"
+          alt="Item 1"
+          class="cate-list-items__bg-collect"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- include footer.html -->
     <footer class="footer-container">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="center">
-        <div class="col-md-12">
-          <p>Footer Container</p>
+  <div class="container">
+    <div class="footer-first">
+      <div class="footer-first__item">
+        <div class="footer-first__ft-logo">
+          <img src="../../images/tanner_logo.svg" alt="Logo Footer" />
+        </div>
+        <div class="footer-first__ft-menu">
+          <nav class="ft-nav">
+            <a href="#1" class="ft-nav__link hover-link">Finda</a>
+            <a href="#2" class="ft-nav__link hover-link">Store</a>
+            <a href="#3" class="ft-nav__link hover-link">Sizing</a>
+            <a href="#4" class="ft-nav__link hover-link">Care</a>
+            <a href="#5" class="ft-nav__link hover-link">Watch</a>
+          </nav>
+        </div>
+        <div class="footer-first__ft-address">
+          <p class="text">Sebazzo Ltd, Unit 3F2</p>
+          <p class="text">Zetland House</p>
+          <p class="text">5-25 Scrutton Street</p>
+          <p class="text">London EC2A 4HJ</p>
+        </div>
+        <div class="newsletter">
+          <p class="newsletter__title">Email Newsletters</p>
+          <p class="newsletter__sub-title">
+            Sign up for new TANNER GOODS content, updates, surveys &amp; offers.
+          </p>
+          <form class="newsletter__form">
+            <input id="email-text" class="newsletter__form__input-text" type="text" />
+            <button class="newsletter__form__btn">
+              <i class="fa-solid fa-angle-right icon-arr"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-second">
+      <div class="footer-second__item">
+        <div class="ft-copyright">
+          <p>&copy; tanner goods portland ore 2016</p>
+        </div>
+        <div class="ft-social">
+          <a href="#" class="ft-social__link hover-link">facebook</a>
+          <a href="#" class="ft-social__link hover-link">pinterest</a>
+          <a href="#" class="ft-social__link hover-link">twitter</a>
+          <a href="#" class="ft-social__link hover-link">instagram</a>
         </div>
       </div>
     </div>
@@ -97,6 +406,9 @@
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <!-- <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
 
+<!-- Swiper Slider build -->
+<script src="node_modules/swiper/swiper-bundle.min.js"></script>
+<!-- endbuild -->
 
 <!-- endbuild -->
 <!-- build:js scripts/script.min.js -->
