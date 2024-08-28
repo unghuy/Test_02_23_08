@@ -108,6 +108,10 @@ export const sassTask = gulp.series(htmlHintTask, () => {
       postcss([
         postcssUrl({
           url: (asset) => {
+            
+            if (asset.url.startsWith('../../../../fonts/webfonts/')) {
+              return asset.url.replace('../../../../fonts/webfonts/', '../fonts/webfonts/');
+            }
             // Example: Change "../images" to "/assets/images"
             if (asset.url.startsWith('../../')) {
               return asset.url.replace('../../', '../');
