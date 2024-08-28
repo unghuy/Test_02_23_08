@@ -116,6 +116,7 @@
   width: 60px;
   color: $text-second;
   font-weight: bold;
+  z-index: 2;
   transform: translate(50%, 0) !important;
 
   &::before {

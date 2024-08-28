@@ -69,6 +69,7 @@
 }
 
 .footer-second {
+  margin-top: 20px;
   &__item {
     display: flex;
     column-gap: 150px;
@@ -80,9 +81,6 @@
     .ft-social {
       display: flex;
       column-gap: 60px;
-      &__link {
-        color: $black;
-      }
     }
   }
 }

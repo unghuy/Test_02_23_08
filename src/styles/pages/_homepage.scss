@@ -86,7 +86,7 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
       &__box {
-        max-width: 325px;
+        max-width: 375px;
         float: right;
 
         p {
@@ -150,13 +150,13 @@
       border: 2px solid #d8d2c6;
       padding: 40px 0 40px 40px;
       position: absolute;
-      top: 27%;
+      top: 30%;
       left: 15%;
       z-index: 10;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
       &__box {
-        max-width: 325px;
+        max-width: 375px;
 
         p {
           font-size: 14px;
@@ -167,10 +167,11 @@
         .arrow {
           background-color: $text-fourth;
           width: 180px;
-          height: 80px;
+          height: 90px;
           position: absolute;
           left: 15%;
-          bottom: -20%;
+          padding-top: 10px;
+          bottom: -30%;
 
           img {
             width: 100%;
@@ -274,8 +275,6 @@
       position: relative;
 
       h2 {
-        @include rem('font-size', 24);
-        @include rem('letter-spacing', 4);
         font-weight: 900;
       }
 
@@ -310,8 +309,6 @@
       margin-top: 50px;
 
       h2 {
-        @include rem('font-size', 24);
-        @include rem('letter-spacing', 4);
         font-weight: 900;
         padding: 0 100px;
 
@@ -421,11 +418,6 @@
       justify-content: flex-start;
       margin-top: 50px;
 
-      h2 {
-        @include rem('font-size', 24);
-        @include rem('letter-spacing', 4);
-      }
-
       p {
         @include rem('font-size', 14);
         text-align: justify;
@@ -466,19 +458,6 @@
 
     &__img {
       width: 50%;
-    }
-  }
-
-  .link-readmore {
-    color: $text-second;
-    display: inline-block;
-    font-weight: bold;
-
-    &::after {
-      content: 'next';
-      font-family: swiper-icons;
-      @include rem('font-size', 12);
-      margin-left: 10px;
     }
   }
 
